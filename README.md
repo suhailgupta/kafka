@@ -12,6 +12,6 @@ This repository would contains all the Kafka playground commands and also the co
 ## Kafka Docker Container Start/Stop
 - We are using docker-compose throughout the series, i would suggest to use the same so that it would be easier later when we will spin up multiple kafka brokers to form a cluster.
 - But still if you want to run the simple docker container from the image only, you can just run below command:
-  docker run suhail50/kafka
+  ```docker run suhail50/kafka ```
 - If you are using the docker-compose, then simply below command would be required to run
-  docker-compose up
+  ```docker-compose up ```
