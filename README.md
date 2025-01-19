@@ -4,7 +4,7 @@ This repository would contains all the Kafka playground commands and also the co
 
 ## Pre-requisites:
 - Java must be installed on your machine.
-- 
+ 
 ## Kafka Docker Setup
 - There is a confluent Kafka image available but thats huge in size. So, for learning, i decided to create our own custom Kafka image.
 - You would find the DockerFile in setup/image folder. I have created the generic image, no hardcoding of file paths from my machine, so it should run fine in your machine as well.
