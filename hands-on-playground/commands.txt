@@ -1,0 +1,23 @@
+
+#Kafka Topic Commands:
+
+kafka-topics.sh --bootstrap-server localhost:9092 --topic hello-world --create
+
+kafka-topics.sh --bootstrap-server localhost:9092 --topic order-events --create
+
+kafka-topics.sh --bootstrap-server localhost:9092 --list
+
+kafka-topics.sh --bootstrap-server localhost:9092 --topic order-events --describe
+
+
+#Kafka Producer Commands:
+
+kafka-console-producer.sh --bootstrap-server localhost:9092 --topic hello-world
+
+#Kafka Consumer Commands:
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic hello-world
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic hello-world --from-beginning
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic hello-world --property print.offset=true
