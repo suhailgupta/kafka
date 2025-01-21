@@ -18,3 +18,7 @@ This repository would contains all the Kafka playground commands and also the co
 -  ```docker run suhail50/kafka ```
 - If you are using the docker-compose, then simply below command would be required to run
 -  ```docker-compose up ```
+
+## Kafka Hands on Commands
+- All the commands are placed in the ```hands-on-playground/commands.txt``` file. You can refer this file for the commands used in the demo video.
+  
