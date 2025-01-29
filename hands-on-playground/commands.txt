@@ -9,6 +9,9 @@ kafka-topics.sh --bootstrap-server localhost:9092 --list
 
 kafka-topics.sh --bootstrap-server localhost:9092 --topic order-events --describe
 
+#Kafka Topic Commands with Partitions:
+
+kafka-topics.sh --bootstrap-server localhost:9092 --topic order-events --create --partitions 2
 
 #Kafka Producer Commands:
 
@@ -21,3 +24,11 @@ kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic hello-world
 kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic hello-world --from-beginning
 
 kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic hello-world --property print.offset=true
+
+#Kafka Producer Commands with Partition Key:
+
+kafka-console-producer.sh --bootstrap-server localhost:9092 --topic order-events --property parse.key=true --property key.separator=:
+
+#Kafka Consumer Commands with Consumer Group:
+
+kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic order-events --property print.key=true --group payment-service 
