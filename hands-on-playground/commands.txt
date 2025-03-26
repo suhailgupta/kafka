@@ -36,3 +36,11 @@ kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic order-events
 #For Resetting the Consumer Offsets:
 Dryrun:  kafka-consumer-groups.sh —bootstrap-server localhost:9092 — group cg —topic order-events —reset-offsets —shift-by -3 —dry-run
 Execute: kafka-consumer-groups.sh —bootstrap-server localhost:9092 — group cg —topic order-events —reset-offsets —shift-by -3 —execute
+
+#Deleting Consumer Groups:
+kafka-consumer-groups.sh --bootstrap-server localhost:9092 --delete --group my-consumer-group
+
+
+
+
+
