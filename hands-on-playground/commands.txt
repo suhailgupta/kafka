@@ -34,8 +34,8 @@ kafka-console-producer.sh --bootstrap-server localhost:9092 --topic order-events
 kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic order-events --property print.key=true --group payment-service 
 
 #For Resetting the Consumer Offsets:
-Dryrun:  kafka-consumer-groups.sh —bootstrap-server localhost:9092 — group cg —topic order-events —reset-offsets —shift-by -3 —dry-run
-Execute: kafka-consumer-groups.sh —bootstrap-server localhost:9092 — group cg —topic order-events —reset-offsets —shift-by -3 —execute
+Dryrun:  kafka-consumer-groups.sh —-bootstrap-server localhost:9092 —-group cg —-topic order-events —-reset-offsets —-shift-by -3 —-dry-run
+Execute: kafka-consumer-groups.sh —-bootstrap-server localhost:9092 —-group cg —-topic order-events —-reset-offsets —-shift-by -3 —-execute
 
 #Deleting Consumer Groups:
 kafka-consumer-groups.sh --bootstrap-server localhost:9092 --delete --group my-consumer-group
