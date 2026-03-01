@@ -1,0 +1,24 @@
+# Build
+target/
+*.jar
+*.war
+!**/src/main/resources/static/**/*.jar
+
+# IDE
+.idea/
+*.iml
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+.docker/

@@ -1,0 +1,19 @@
+{
+  "name": "orders-to-s3-sink",
+  "config": {
+    "connector.class": "io.confluent.connect.s3.S3SinkConnector",
+    "tasks.max": "1",
+    "topics": "orders-server.public.orders",
+    "storage.class": "io.confluent.connect.s3.storage.S3Storage",
+    "store.url": "http://minio:9000",
+    "s3.bucket.name": "orders-events",
+    "s3.region": "us-east-1",
+    "topics.dir": "topics",
+    "format.class": "io.confluent.connect.s3.format.json.JsonFormat",
+    "flush.size": "1",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "true",
+    "partitioner.class": "io.confluent.connect.storage.partitioner.DefaultPartitioner"
+  }
+}

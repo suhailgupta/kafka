@@ -1,0 +1,21 @@
+{
+  "name": "orders-to-analytics-jdbc-sink",
+  "config": {
+    "connector.class": "io.confluent.connect.jdbc.JdbcSinkConnector",
+    "tasks.max": "1",
+    "topics": "orders-server.public.orders",
+    "connection.url": "jdbc:postgresql://analytics-db:5432/analytics",
+    "connection.user": "analyticsuser",
+    "connection.password": "analyticspass",
+    "auto.create": "false",
+    "auto.evolve": "false",
+    "insert.mode": "upsert",
+    "pk.mode": "record_value",
+    "pk.fields": "id",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "true",
+    "table.name.format": "order_events",
+    "fields.whitelist": "id,order_number,customer_id,customer_email,total_amount,currency,status,created_at"
+  }
+}
